@@ -8,15 +8,21 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.12/48e4e5d60309ebd833bc528dcf77668eab3cd72c/lombok-1.18.12.jar" />
         </processorPath>
         <module name="reactor-addons-demo.usecase.test" />
-        <module name="reactor-addons-demo.reactive-web.test" />
         <module name="reactor-addons-demo.dynamodb-fallback.main" />
-        <module name="reactor-addons-demo.dynamodb-fallback.test" />
         <module name="reactor-addons-demo.model.test" />
         <module name="reactor-addons-demo.model.main" />
+        <module name="reactor-addons-demo.reactive-repository-commons.test" />
+        <module name="driven-adapters.reactor-addons-demo.mongodb-repository.main~1" />
+        <module name="reactor-addons-demo.redis-repository.test" />
+        <module name="reactor-addons-demo.usecase.main" />
+        <module name="reactor-addons-demo.reactive-repository-commons.main" />
+        <module name="reactor-addons-demo.redis-repository.main" />
+        <module name="driven-adapters.reactor-addons-demo.mongodb-repository.test~2" />
+        <module name="reactor-addons-demo.reactive-web.test" />
+        <module name="reactor-addons-demo.dynamodb-fallback.test" />
         <module name="reactor-addons-demo.reactive-web.main" />
         <module name="reactor-addons-demo.app-service.test" />
         <module name="reactor-addons-demo.app-service.main" />
-        <module name="reactor-addons-demo.usecase.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="14" />

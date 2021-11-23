@@ -1,21 +1,33 @@
-##Spring Configuration
 server:
   port: 8080
+
 spring:
   application:
     name: reactor-addons-demo
-  devtools:
-    add-properties: false
-  rabbitmq:
-    host: localhost
-    port: 15672
-    username: guest
-    password: guest
+    devtools:
+      add-properties: false
+  main:
+    banner-mode: off
+  data:
+    mongodb:
+      uri: MONGO_CONNECTION_HERE
+      auto-index-creation: false
+      codec:
+        max-in-memory-size: 100MB
 
-app:
-  async:
-    withDLQRetry: true
-    retryDelay: 5000
-    maxRetries: 3
+springdoc:
+  api-docs:
+    groups:
+      enabled: true
 
+stash:
+  memory:
+    expireTime: 10
+    maxSize: 10_000
+  redis:
+    expireTime: 60
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password: password123
 

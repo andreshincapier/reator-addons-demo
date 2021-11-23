@@ -1,0 +1,10 @@
+dependencies {
+    compile project(':reactive-repository-commons')
+    compile project(':model')
+
+    compile 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+    testCompile 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
+    testCompile 'org.reactivecommons.utils:object-mapper:0.1.0'
+
+}
+
