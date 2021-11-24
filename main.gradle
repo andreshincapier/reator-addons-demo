@@ -6,27 +6,17 @@ allprojects {
     }
 }
 
-configurations.all {
-    resolutionStrategy.eachDependency {DependencyResolveDetails details ->
-        if (details.requested.group == 'io.projectreactor.rabbitmq'){
-            details.useVersion('1.5.0')
-            details.because('Upgrade')
-        }
-    }
-}
-
 subprojects {
     apply plugin: 'java'
     apply plugin: 'jacoco'
     apply plugin: 'io.spring.dependency-management'
 
-    sourceCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_14
 
     dependencies {
         implementation 'io.projectreactor:reactor-core'
         implementation 'io.projectreactor.addons:reactor-extra'
-
-        compile 'org.reactivecommons:async-commons-starter:0.4.6'
+        implementation 'org.slf4j:slf4j-api'
 
         testImplementation 'io.projectreactor:reactor-test'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'

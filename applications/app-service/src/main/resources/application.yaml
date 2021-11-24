@@ -1,21 +1,16 @@
-##Spring Configuration
-server:
-  port: 8080
 spring:
+  main:
+    banner-mode: off
   application:
-    name: redis-reactive-cache
-  devtools:
-    add-properties: false
-  rabbitmq:
-    host: <PUT_THE_HOST>
-    port: 5672
-    username: <PUT_THE_USER>
-    password: <PUT_THE_PASSWORD>
+    name: ivoy-service
+  data:
+    mongodb:
+      uri: "mongodb+srv://andreshincapier:andreshincapier@cluster0.r2ikq.mongodb.net/dna_analysis?retryWrites=true&w=majority"
+      auto-index-creation: false
+      codec:
+        max-in-memory-size: 100MB
 
-app:
-  async:
-    withDLQRetry: true
-    retryDelay: 5000
-    maxRetries: 3
-
-
+springdoc:
+  api-docs:
+    groups:
+      enabled: true
